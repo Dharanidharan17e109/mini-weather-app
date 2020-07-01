@@ -1,0 +1,46 @@
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/blue.css";
+
+
+/* Place any CSS rules you want to apply on both iOS and Android here.
+This is where the vast majority of your CSS code goes. */
+TextField:focus{
+    border-color: red;
+}
+.picker {
+    color: red;
+    border-color: brown;
+    border-width: 2;
+    width: 300;
+    height: 50;
+    vertical-align: middle;
+}
+
+StackLayout{
+    color: black;
+    background-color: lightsteelblue;
+    text-align: center;
+}
+.pan{
+   background-color: lightblue;
+  }
+
+  TextField{
+      background-color:lightyellow;
+      width: 300;
+  }
+Label{
+    font-size: 15 ;
+    font-style: italic;
+}
+
+Button{
+    height: 40;
+    width: 260;
+    background-color: lightgreen;
+}
+.btn-change{
+    height: 50;
+    width: 300;
+    background-color: sandybrown;
+}

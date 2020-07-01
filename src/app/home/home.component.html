@@ -1,0 +1,18 @@
+<ActionBar title="Mini-Weather App" class="action-bar"></ActionBar>
+<ScrollView>
+  <StackLayout orientation="vertical">
+    <StackLayout>
+      <Button text="Change Language to Tamil" (tap)="changeLang($event)" class="btn-change" automationText="cl"></Button>
+      <Label class="h1" text="{{'Get your City Weather'|translate}}" textWrap="true"></Label>
+      <StackLayout class="hr m-10"></StackLayout>
+    </StackLayout>
+      <StackLayout *ngFor="let item of this.panel let i=index"> 
+          <TextField hint="{{'Enter the City Name'|translate}}" [(ngModel)]="name" automationText="tf"></TextField>
+          <Button text="{{'Get Weather'|translate}}" (tap)="getWeather(i)" automationText="getbtn"></Button>
+          <StackLayout *ngFor="let item1 of item" class="pan" width="300">
+            <label [text]="item1"></label>
+          </StackLayout>
+          <StackLayout class="hr m-10"></StackLayout>
+      </StackLayout>
+  </StackLayout>
+</ScrollView>
